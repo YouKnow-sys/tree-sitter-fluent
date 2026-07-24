@@ -1,39 +1,48 @@
 # a line comment
-#   ^ @comment.line
+# ^ @comment.line
 ## a group comment
-#    ^ @comment.block
+#  ^ @comment.block
 ### a resource comment
-#     ^ @comment.block
+#   ^ @comment.block
 -brand-name = Firefox
 # ^ @constant
 #           ^ @operator
-#              ^ @markup.raw
-key = Value
-# ^ @string.special.key
-#   ^ @operator
-#      ^ @markup.raw
-host =
-    .aria-label = Sign in
+#             ^ @string
+login-title = Sign in
+# ^ @property
+#           ^ @operator
+#             ^ @string
+attr-msg =
+    .aria-label = Open
 #   ^ @punctuation.delimiter
-#     ^ @property.definition
+#    ^ @property.definition
 #               ^ @operator
-calls = { NUMBER($total) }
-#       ^ @punctuation.bracket
-#          ^ @function.call
-#               ^ @punctuation.bracket
-#                  ^ @variable
-#                      ^ @punctuation.bracket
-#                        ^ @punctuation.bracket
-ref-msg = See { key }
-#                ^ @local.reference
+#                 ^ @string
+ref-msg = See { login-title }
+#             ^ @punctuation.bracket
+#               ^ @property
+#                           ^ @punctuation.bracket
 ref-term = Use { -brand-name }
-#                ^ @punctuation.delimiter
-#                  ^ @local.reference
+#              ^ @punctuation.bracket
+#                ^ @constant
+#                 ^ @constant
+#                            ^ @punctuation.bracket
+ref-attr = { -brand-name.title }
+#            ^ @constant
+#             ^ @constant
+#                        ^ @property
+#                              ^ @punctuation.bracket
+calls = { NUMBER($total) }
+#         ^ @function.call
+#                ^ @variable
+#                 ^ @variable
+#                        ^ @punctuation.bracket
 lit = { "foo" }
-#        ^ @string.special
+#        ^ @string
 nm = { 5 }
 #      ^ @number
 named = { -brand-name(width: "10") }
-#           ^ @local.reference
-#                      ^ @variable.parameter
-#                          ^ @punctuation.delimiter
+#         ^ @constant
+#          ^ @constant
+#                     ^ @variable.parameter
+#                             ^ @string
